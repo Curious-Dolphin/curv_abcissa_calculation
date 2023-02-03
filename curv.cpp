@@ -11,6 +11,7 @@ struct Point {
     double y;
     double z;
 };
+/sas
 
 double eucl_distance(const Point& p1, const Point& p2) {
   return std::sqrt(std::pow(p1.x - p2.x, 2) + std::pow(p1.y - p2.y, 2) + std::pow(p1.z - p2.z, 2));
