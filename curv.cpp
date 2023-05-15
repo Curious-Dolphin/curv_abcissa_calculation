@@ -3,6 +3,7 @@
 #include <vector>
 #include <tuple>
 #include <random>
+#include <OPENCV_DIR/opencv2/opencv.hpp>
 #define N 6
 
 
@@ -46,6 +47,26 @@ for (int i = 1; i < path.size(); ++i) {
   }
   return length;
 }
+//create merge sort of a vector of numbers
+void sort(){
+    int i, j, first, temp;  
+    for (i = path.size() - 1; i > 0; i--)  
+    {
+        first = 0;                 //initialize to subscript of first element
+        for (j = 1; j <= i; j++)   //locate smallest element between positions 1 and i.
+        {
+            if (path[j] < path[first])         
+                first = j;
+        }
+        temp = path[first];   //swap smallest found with element in position i.
+        path[first] = path[i];
+        path[i] = temp;
+
+}
+}
+
+
+
 int main (){
     curv curva;
     return 0;
